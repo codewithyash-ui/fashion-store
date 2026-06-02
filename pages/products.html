@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .products-header {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .filter-sidebar {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .filter-group {
+            margin-bottom: 25px;
+        }
+        .filter-group h4 {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .filter-group select, .filter-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        .price-range {
+            display: flex;
+            gap: 10px;
+        }
+        .price-range input {
+            width: 50%;
+        }
+        .products-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+        .sort-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .sort-select {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .products-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader"><div class="loader-content"><div class="loader-spinner"></div><p>Fashion Store</p></div></div>
+    
+    <header class="header" id="header">
+        <div class="top-bar"><div class="container"><p>Free shipping on orders over $50 | 30-day return policy</p></div></div>
+        <div class="main-header"><div class="container"><div class="logo"><a href="../index.html"><h1>FASHION<span>STORE</span></h1></a></div>
+        <nav class="navbar"><ul class="nav-menu"><li><a href="../index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-icons"><a href="search.html" class="search-icon"><i class="fas fa-search"></i></a><a href="wishlist.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a><a href="login.html" class="user-icon"><i class="fas fa-user"></i></a><div class="hamburger"><span></span><span></span><span></span></div></div></nav></div></div>
+    </header>
+
+    <section class="products-header">
+        <div class="container">
+            <h1>Shop All Products</h1>
+            <p>Discover our latest collection</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="products-layout">
+                <aside class="filter-sidebar">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <select id="price-filter">
+                            <option value="all">All Prices</option>
+                            <option value="0-50">Under $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-200">$100 - $200</option>
+                            <option value="200-500">$200 - $500</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Search</h4>
+                        <input type="text" id="search-input" placeholder="Search products...">
+                    </div>
+                    <button onclick="resetFilters()" class="btn-outline" style="width: 100%;">Reset Filters</button>
+                </aside>
+                <main>
+                    <div class="sort-bar">
+                        <span id="results-count">Showing 0 products</span>
+                        <select id="sort-filter" class="sort-select">
+                            <option value="latest">Latest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div id="products-container" class="products-grid"></div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3>FASHION<span>STORE</span></h3><p>Your one-stop destination for premium fashion.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> (800) 2345-6789</li><li><i class="fas fa-envelope"></i> support@fashionstore.com</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Fashion Store</p><div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div></div>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher - 5 Themes -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-switcher" id="theme-switcher">
+        <div class="theme-btn theme-default" data-theme="default" title="Luxury Gold"></div>
+        <div class="theme-btn theme-blue" data-theme="blue" title="Ocean Blue"></div>
+        <div class="theme-btn theme-green" data-theme="green" title="Forest Green"></div>
+        <div class="theme-btn theme-orange" data-theme="orange" title="Sunset Orange"></div>
+        <div class="theme-btn theme-purple" data-theme="purple" title="Purple Royale"></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/themes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sync theme when products page loads
+            if (typeof syncThemeAcrossPages === 'function') {
+                syncThemeAcrossPages();
+            }
+        });
+    </script>
+</body>
+</html>

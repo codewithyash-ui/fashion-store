@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .success-page { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 80px 20px; text-align: center; }
+        .success-card { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 500px; }
+        .success-icon { font-size: 5rem; color: #2ecc71; margin-bottom: 20px; }
+        .btn-group { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+        @media (max-width: 480px) { .success-card { padding: 30px; } .btn-group { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="success-page">
+        <div class="success-card">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h1>Order Confirmed!</h1>
+            <p>Thank you for your purchase. Your order has been placed successfully.</p>
+            <p>A confirmation email has been sent to your email address.</p>
+            <div class="btn-group">
+                <a href="../index.html" class="btn-primary">Continue Shopping</a>
+                <a href="products.html" class="btn-outline" style="border-color: #333; color: #333;">View Products</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Switcher - 5 Themes -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-switcher" id="theme-switcher">
+        <div class="theme-btn theme-default" data-theme="default" title="Luxury Gold"></div>
+        <div class="theme-btn theme-blue" data-theme="blue" title="Ocean Blue"></div>
+        <div class="theme-btn theme-green" data-theme="green" title="Forest Green"></div>
+        <div class="theme-btn theme-orange" data-theme="orange" title="Sunset Orange"></div>
+        <div class="theme-btn theme-purple" data-theme="purple" title="Purple Royale"></div>
+    </div>
+
+    <script src="../js/themes.js"></script>
+    <script>
+        localStorage.removeItem('cart');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sync theme when order success page loads
+            if (typeof syncThemeAcrossPages === 'function') {
+                syncThemeAcrossPages();
+            }
+        });
+    </script>
+</body>
+</html>

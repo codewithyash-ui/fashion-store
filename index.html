@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Premium fashion store offering latest trends in men's and women's clothing. Shop now for exclusive collections.">
+    <meta name="keywords" content="fashion, clothing, men's clothes, women's fashion, online shopping">
+    <meta name="author" content="Fashion Store">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Fashion Store - Premium Fashion E-Commerce">
+    <meta property="og:description" content="Shop the latest trends in fashion. Free shipping on orders over $50.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:url" content="https://yourstore.com">
+    <meta property="og:type" content="website">
+    <title>Fashion Store | Premium Fashion E-Commerce</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <style>
+        /* Admin Button Style - Only ONE button */
+        .admin-link {
+            background: #2c3e50 !important;
+            color: white !important;
+            padding: 5px 12px !important;
+            border-radius: 20px !important;
+            font-size: 0.85rem !important;
+            margin-left: 5px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+        }
+        .admin-link i {
+            font-size: 0.85rem !important;
+        }
+        .admin-link:hover {
+            background: #e74c3c !important;
+            color: white !important;
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+<body>
+
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Fashion Store</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container">
+                <p>Free shipping on orders over $50 | 30-day return policy</p>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>FASHION<span>STORE</span></h1>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/products.html">Shop</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-icons">
+                        <a href="pages/search.html" class="search-icon"><i class="fas fa-search"></i></a>
+                        <a href="pages/wishlist.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+                        <a href="pages/cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                        <a href="pages/login.html" class="user-icon"><i class="fas fa-user"></i></a>
+                        <!-- ONLY ONE Admin Button - in header icons -->
+                        <a href="admin/login.html" class="admin-link" id="desktop-admin-link"><i class="fas fa-user-shield"></i> Admin</a>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600');">
+                        <div class="hero-text" data-aos="fade-up">
+                            <h2>New Arrivals</h2>
+                            <h1>CREATE YOUR INDIVIDUALITY</h1>
+                            <p>Discover the latest trends in men's fashion</p>
+                            <a href="pages/products.html" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600');">
+                        <div class="hero-text" data-aos="fade-up">
+                            <h2>Summer Collection</h2>
+                            <h1>BIG CLEARANCE SALE</h1>
+                            <p>Up to 50% off on selected items</p>
+                            <a href="pages/products.html" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600');">
+                        <div class="hero-text" data-aos="fade-up">
+                            <h2>Exclusive Collection</h2>
+                            <h1>PREMIUM QUALITY</h1>
+                            <p>Luxury fashion at affordable prices</p>
+                            <a href="pages/products.html" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Top Categories Section -->
+    <section class="top-categories section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Shop by Category</h2>
+                <p>Explore our top categories</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400" alt="Men's Clothing" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Men's Clothing</h3>
+                            <a href="pages/products.html?category=mens" class="btn-outline">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400" alt="Women's Clothing" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Women's Clothing</h3>
+                            <a href="pages/products.html?category=womens" class="btn-outline">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400" alt="Footwear" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Footwear</h3>
+                            <a href="pages/products.html?category=footwear" class="btn-outline">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400" alt="Accessories" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Accessories</h3>
+                            <a href="pages/products.html?category=accessories" class="btn-outline">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Featured Products</h2>
+                <p>Our handpicked collection for you</p>
+            </div>
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Products will be loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Banner -->
+    <section class="special-offers" data-aos="zoom-in">
+        <div class="container">
+            <div class="offer-content">
+                <h2>Big Clearance Sale</h2>
+                <h3>Up to 70% Off</h3>
+                <p>Limited time offer. Shop now and save big!</p>
+                <a href="pages/products.html" class="btn-primary">Shop Sale <i class="fas fa-tag"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-products section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Trending Now</h2>
+                <p>Most popular items this week</p>
+            </div>
+            <div class="products-grid" id="trending-products-grid">
+                <!-- Products will be loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Customer Reviews</h2>
+                <p>What our customers say about us</p>
+            </div>
+            <div class="reviews-slider">
+                <div class="swiper reviewsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Amazing quality and fast shipping! The clothes fit perfectly. Highly recommend this store."</p>
+                                <div class="reviewer">
+                                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Reviewer">
+                                    <h4>Sarah Johnson</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Great customer service and easy returns. The website is very user-friendly."</p>
+                                <div class="reviewer">
+                                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Reviewer">
+                                    <h4>Michael Chen</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>"Love the designs! Very trendy and affordable. Will definitely shop again."</p>
+                                <div class="reviewer">
+                                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Reviewer">
+                                    <h4>Emily Rodriguez</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section-padding">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p class="newsletter-note">By subscribing, you agree to our Privacy Policy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>FASHION<span>STORE</span></h3>
+                    <p>Your one-stop destination for premium fashion. Quality clothing at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> (800) 2345-6789</li>
+                        <li><i class="fas fa-envelope"></i> support@fashionstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Ave, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fashion Store. All rights reserved.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher - 5 Themes -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-switcher" id="theme-switcher">
+        <div class="theme-btn theme-default" data-theme="default" title="Luxury Gold"></div>
+        <div class="theme-btn theme-blue" data-theme="blue" title="Ocean Blue"></div>
+        <div class="theme-btn theme-green" data-theme="green" title="Forest Green"></div>
+        <div class="theme-btn theme-orange" data-theme="orange" title="Sunset Orange"></div>
+        <div class="theme-btn theme-purple" data-theme="purple" title="Purple Royale"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/themes.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .about-story {
+            padding: 80px 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-image img {
+            border-radius: 20px;
+            width: 100%;
+        }
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        .value-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .team-card {
+            text-align: center;
+        }
+        .team-card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader"><div class="loader-content"><div class="loader-spinner"></div><p>Fashion Store</p></div></div>
+    
+    <header class="header" id="header">
+        <div class="top-bar"><div class="container"><p>Free shipping on orders over $50 | 30-day return policy</p></div></div>
+        <div class="main-header"><div class="container"><div class="logo"><a href="../index.html"><h1>FASHION<span>STORE</span></h1></a></div>
+        <nav class="navbar"><ul class="nav-menu"><li><a href="../index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-icons"><a href="search.html" class="search-icon"><i class="fas fa-search"></i></a><a href="wishlist.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a><a href="login.html" class="user-icon"><i class="fas fa-user"></i></a><div class="hamburger"><span></span><span></span><span></span></div></div></nav></div></div>
+    </header>
+
+    <section class="about-hero">
+        <h1 data-aos="fade-up">Our Story</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Discover the passion behind Fashion Store</p>
+    </section>
+
+    <section class="about-story">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600" alt="About Fashion Store">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h2>Who We Are</h2>
+                    <p>Founded in 2020, Fashion Store has grown from a small boutique to a leading online fashion destination. We believe that fashion is a form of self-expression, and everyone deserves to look and feel their best.</p>
+                    <p>Our mission is to provide high-quality, trendy clothing at affordable prices. We carefully curate our collections from the best designers and brands worldwide.</p>
+                    <p>With over 100,000+ happy customers, we continue to innovate and bring the latest fashion trends to your doorstep.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-item"><h3>100K+</h3><p>Happy Customers</p></div>
+                <div class="stat-item"><h3>500+</h3><p>Products</p></div>
+                <div class="stat-item"><h3>50+</h3><p>Brands</p></div>
+                <div class="stat-item"><h3>24/7</h3><p>Support</p></div>
+            </div>
+
+            <div class="values-grid" data-aos="fade-up">
+                <div class="value-card"><i class="fas fa-gem"></i><h3>Quality</h3><p>Premium materials and craftsmanship</p></div>
+                <div class="value-card"><i class="fas fa-leaf"></i><h3>Sustainability</h3><p>Eco-friendly practices</p></div>
+                <div class="value-card"><i class="fas fa-heart"></i><h3>Customer First</h3><p>Your satisfaction is our priority</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3>FASHION<span>STORE</span></h3><p>Your one-stop destination for premium fashion.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> (800) 2345-6789</li><li><i class="fas fa-envelope"></i> support@fashionstore.com</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Fashion Store</p><div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div></div>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher - 5 Themes -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-switcher" id="theme-switcher">
+        <div class="theme-btn theme-default" data-theme="default" title="Luxury Gold"></div>
+        <div class="theme-btn theme-blue" data-theme="blue" title="Ocean Blue"></div>
+        <div class="theme-btn theme-green" data-theme="green" title="Forest Green"></div>
+        <div class="theme-btn theme-orange" data-theme="orange" title="Sunset Orange"></div>
+        <div class="theme-btn theme-purple" data-theme="purple" title="Purple Royale"></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/themes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sync theme when about page loads
+            if (typeof syncThemeAcrossPages === 'function') {
+                syncThemeAcrossPages();
+            }
+        });
+    </script>
+</body>
+</html>

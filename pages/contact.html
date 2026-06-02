@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .contact-section {
+            padding: 80px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+        }
+        .contact-info-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-item i {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+        .info-item h3 {
+            margin-bottom: 8px;
+        }
+        .contact-form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .contact-form-card h2 {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .map-container {
+            margin-top: 60px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .faq-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .faq-item h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader"><div class="loader-content"><div class="loader-spinner"></div><p>Fashion Store</p></div></div>
+    
+    <header class="header" id="header">
+        <div class="top-bar"><div class="container"><p>Free shipping on orders over $50 | 30-day return policy</p></div></div>
+        <div class="main-header"><div class="container"><div class="logo"><a href="../index.html"><h1>FASHION<span>STORE</span></h1></a></div>
+        <nav class="navbar"><ul class="nav-menu"><li><a href="../index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-icons"><a href="search.html" class="search-icon"><i class="fas fa-search"></i></a><a href="wishlist.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a><a href="login.html" class="user-icon"><i class="fas fa-user"></i></a><div class="hamburger"><span></span><span></span><span></span></div></div></nav></div></div>
+    </header>
+
+    <section class="contact-hero">
+        <h1 data-aos="fade-up">Get In Touch</h1>
+        <p data-aos="fade-up" data-aos-delay="100">We'd love to hear from you</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-card" data-aos="fade-right">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><h3>Visit Us</h3><p>123 Fashion Avenue, New York, NY 10001, USA</p></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div><h3>Call Us</h3><p>(800) 2345-6789<br>Mon-Fri: 9am-6pm EST</p></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><h3>Email Us</h3><p>support@fashionstore.com<br>sales@fashionstore.com</p></div>
+                    </div>
+                    <div class="social-links" style="margin-top: 20px; justify-content: flex-start;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-card" data-aos="fade-left">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" id="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" id="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" id="contact-message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up"><h2>Frequently Asked Questions</h2><p>Quick answers to common questions</p></div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up"><h3>Shipping Information</h3><p>Free shipping on orders over $50. Standard delivery takes 3-5 business days.</p></div>
+                <div class="faq-item" data-aos="fade-up"><h3>Return Policy</h3><p>30-day return policy for unused items in original condition.</p></div>
+                <div class="faq-item" data-aos="fade-up"><h3>Payment Methods</h3><p>We accept Credit/Debit cards, UPI, PayPal, and Cash on Delivery.</p></div>
+                <div class="faq-item" data-aos="fade-up"><h3>Order Tracking</h3><p>Track your order using the tracking link sent via email.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb5f025%3A0x6f0f2b8b5b8b8b8b!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1641234567890!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3>FASHION<span>STORE</span></h3><p>Your one-stop destination for premium fashion.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> (800) 2345-6789</li><li><i class="fas fa-envelope"></i> support@fashionstore.com</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Fashion Store</p><div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div></div>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher - 5 Themes -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-switcher" id="theme-switcher">
+        <div class="theme-btn theme-default" data-theme="default" title="Luxury Gold"></div>
+        <div class="theme-btn theme-blue" data-theme="blue" title="Ocean Blue"></div>
+        <div class="theme-btn theme-green" data-theme="green" title="Forest Green"></div>
+        <div class="theme-btn theme-orange" data-theme="orange" title="Sunset Orange"></div>
+        <div class="theme-btn theme-purple" data-theme="purple" title="Purple Royale"></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/themes.js"></script>
+    <script>
+        document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sync theme when contact page loads
+            if (typeof syncThemeAcrossPages === 'function') {
+                syncThemeAcrossPages();
+            }
+        });
+    </script>
+</body>
+</html>
