@@ -8,8 +8,48 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        /* Back to Website Button */
+        .back-home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .back-home-btn:hover {
+            background: #e74c3c;
+            transform: translateX(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .back-home-btn i {
+            font-size: 1rem;
+        }
+        /* Adjust sidebar to not overlap with button */
+        .admin-sidebar {
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body class="admin-body">
+    <!-- Back to Website Button -->
+    <a href="../index.html" class="back-home-btn">
+        <i class="fas fa-arrow-left"></i> Back to Website
+    </a>
+
     <div class="admin-wrapper">
         <aside class="admin-sidebar">
             <div class="admin-logo">

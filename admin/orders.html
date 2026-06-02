@@ -3,31 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Orders - Admin Panel</title>
+    <title>Manage Products - Admin Panel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .back-home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        .back-home-btn:hover {
+            background: #e74c3c;
+            transform: translateX(-5px);
+        }
+        .back-home-btn i {
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body class="admin-body">
+    <a href="../index.html" class="back-home-btn">
+        <i class="fas fa-arrow-left"></i> Back to Website
+    </a>
+
     <div class="admin-wrapper">
         <aside class="admin-sidebar">
             <div class="admin-logo"><h2>FASHION<span>STORE</span></h2><p>Admin Panel</p></div>
             <nav class="admin-nav">
                 <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                <a href="products.html"><i class="fas fa-box"></i> Products</a>
-                <a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Orders</a>
+                <a href="products.html" class="active"><i class="fas fa-box"></i> Products</a>
+                <a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a>
                 <a href="customers.html"><i class="fas fa-users"></i> Customers</a>
                 <a href="#" id="admin-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </nav>
         </aside>
         <main class="admin-main">
-            <div class="admin-header"><h1>Manage Orders</h1><div class="admin-user"><i class="fas fa-user-circle"></i><span>Administrator</span></div></div>
-            <div class="orders-section">
-                <h2>All Orders</h2>
+            <div class="admin-header"><h1>Manage Products</h1><div class="admin-user"><i class="fas fa-user-circle"></i><span>Administrator</span></div></div>
+            
+            <div class="product-form-card">
+                <h2 id="form-title">Add New Product</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <div class="form-row">
+                        <div class="form-group"><label>Product Name</label><input type="text" id="product-name" required></div>
+                        <div class="form-group"><label>Price</label><input type="number" id="product-price" step="0.01" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Category</label><select id="product-category"><option value="mens">Men's</option><option value="womens">Women's</option><option value="footwear">Footwear</option><option value="accessories">Accessories</option></select></div>
+                        <div class="form-group"><label>Image URL</label><input type="text" id="product-image" placeholder="https://images.unsplash.com/..."></div>
+                    </div>
+                    <div class="form-group"><label>Description</label><textarea id="product-description" rows="3"></textarea></div>
+                    <button type="submit" class="btn-primary">Save Product</button>
+                </form>
+            </div>
+            
+            <div class="products-section">
+                <h2>All Products</h2>
                 <div class="table-responsive">
-                    <table id="orders-table">
-                        <thead><tr><th>Order ID</th><th>Customer</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+                    <table id="products-table">
+                        <thead><tr><th>ID</th><th>Image</th><th>Name</th><th>Price</th><th>Category</th><th>Status</th><th>Actions</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -35,7 +84,6 @@
         </main>
     </div>
 
-    <!-- Theme Switcher - 5 Themes -->
     <button class="theme-toggle-btn" id="theme-toggle-btn">
         <i class="fas fa-palette"></i>
     </button>
@@ -49,13 +97,5 @@
 
     <script src="../js/admin.js"></script>
     <script src="../js/themes.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sync theme when admin orders page loads
-            if (typeof syncThemeAcrossPages === 'function') {
-                syncThemeAcrossPages();
-            }
-        });
-    </script>
 </body>
 </html>

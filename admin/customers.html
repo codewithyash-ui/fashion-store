@@ -8,8 +8,39 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/themes.css">
+    <style>
+        .back-home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        .back-home-btn:hover {
+            background: #e74c3c;
+            transform: translateX(-5px);
+        }
+        .back-home-btn i {
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body class="admin-body">
+    <a href="../index.html" class="back-home-btn">
+        <i class="fas fa-arrow-left"></i> Back to Website
+    </a>
+
     <div class="admin-wrapper">
         <aside class="admin-sidebar">
             <div class="admin-logo"><h2>FASHION<span>STORE</span></h2><p>Admin Panel</p></div>
@@ -35,7 +66,6 @@
         </main>
     </div>
 
-    <!-- Theme Switcher - 5 Themes -->
     <button class="theme-toggle-btn" id="theme-toggle-btn">
         <i class="fas fa-palette"></i>
     </button>
@@ -49,13 +79,5 @@
 
     <script src="../js/admin.js"></script>
     <script src="../js/themes.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sync theme when admin customers page loads
-            if (typeof syncThemeAcrossPages === 'function') {
-                syncThemeAcrossPages();
-            }
-        });
-    </script>
 </body>
 </html>
